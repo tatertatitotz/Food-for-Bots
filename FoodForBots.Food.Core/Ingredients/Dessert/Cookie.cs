@@ -5,12 +5,8 @@ using System.Text;
 
 namespace FoodForBots.Food.Core.Ingredients.Dessert
 {
-    public class CookieDough : Ingredient
+    public class Cookie : IIngredient, IMenuItem
     {
-
-    }
-    public class ChocolateChipCookieDough : Ingredient
-    {
-
+        
     }
 }
