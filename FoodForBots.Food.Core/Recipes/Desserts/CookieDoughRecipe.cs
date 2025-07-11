@@ -12,6 +12,16 @@ using System.Text;
 
 namespace FoodForBots.Food.Core.Recipes.Desserts
 {
+    public class ChocolateChipCookieDoughRecipe : Recipe
+    {
+        public ChocolateChipCookieDoughRecipe()
+        {
+            AddRequirement<CookieDough>(1);
+            AddRequirement<ChocolateChip>(1);
+            AddOutput<ChocolateChipCookieDough>(1);
+        }
+    }
+
     public class CookieDoughRecipe : Recipe, IIngredient
     {
         public CookieDoughRecipe()
@@ -23,15 +33,6 @@ namespace FoodForBots.Food.Core.Recipes.Desserts
             AddOutput<CookieDough>(1);
         }
     }
-    public class ChocolateChipCookieDoughRecipe : Recipe
-    {
-        public ChocolateChipCookieDoughRecipe()
-        {
-            AddRequirement<CookieDough>(1);
-            AddRequirement<ChocolateChip>(1);
-            AddOutput<ChocolateChipCookieDough>(1);
-        }
-    }
     public class CookieRecipe : Recipe
     {
         public CookieRecipe()
@@ -40,6 +41,16 @@ namespace FoodForBots.Food.Core.Recipes.Desserts
             AddRequirement<BakingTray, DefaultSetting>(1, new DefaultSetting());
             AddRequirement<Oven, OvenSetting>(1, new OvenSetting() {Fahrenheit = 350, HeatingSeconds = 60*12});
             AddOutput<Cookie>(12);
+        }
+    }
+    public class ChocolateChipCookieRecipe : Recipe
+    {
+        public ChocolateChipCookieRecipe()
+        {
+            AddRequirement<ChocolateChipCookieDough>(1);
+            AddRequirement<BakingTray, DefaultSetting>(1, new DefaultSetting());
+            AddRequirement<Oven, OvenSetting>(1, new OvenSetting() { Fahrenheit = 350, HeatingSeconds = 60 * 12 });
+            AddOutput<ChocolateChipCookie>(12);
         }
     }
 }

@@ -18,19 +18,20 @@ namespace FoodForBots.Food.Core.Recipes.Desserts
             AddRequirement<Egg>(1);
         }
     }
+    public class CakeRecipe : Recipe
+    {
+        public CakeRecipe()
+        {
+            AddRequirement<CakeBatter>(1);
+        }
+    }
+
     public class ChocolateChipCakeBatterRecipe : Recipe
     {
         public ChocolateChipCakeBatterRecipe()
         {
             AddRequirement<CakeBatter>(1);
             AddRequirement<ChocolateChip>(1);
-        }
-    }
-    public class CakeRecipe : Recipe
-    {
-        public CakeRecipe()
-        {
-            AddRequirement<CakeBatter>(1);
         }
     }
 }
