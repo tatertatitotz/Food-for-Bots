@@ -21,7 +21,7 @@ namespace FoodForBots.BDD.Tests.RecipeIngredients
                 var canMake = maker.StartMaking(cookieRecipe);
                 var cookies = maker.FinishMaking(cookieRecipe);
                 Assert.True(canMake);
-                Assert.Equal(12, cookies.Count());
+                Assert.Equal(12, cookies.First().Quantity);
             }
         }
 

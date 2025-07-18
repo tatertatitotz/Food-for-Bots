@@ -1,11 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace FoodForBots.Contracts.Ingredients
+﻿namespace FoodForBots.Contracts.Ingredients
 {
-	public interface IIngredient
-	{
-
-	}
+    public interface IIngredient
+    {
+        int Quantity { get; }
+        
+    }
 }

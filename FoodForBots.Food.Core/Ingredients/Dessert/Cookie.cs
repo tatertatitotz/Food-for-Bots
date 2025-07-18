@@ -2,19 +2,30 @@
 
 namespace FoodForBots.Food.Core.Ingredients.Dessert
 {
-    public class Cookie : IIngredient, IMenuItem
+    public class Cookie : Ingredient, IMenuItem
     {
         public Cookie() 
+            :base(0)
         { 
         
         }
         public Cookie(int quantity)
+            :base(quantity) 
         {
 
         }
     }
-    public class ChocolateChipCookie : IIngredient, IMenuItem
+    public class ChocolateChipCookie : Ingredient, IMenuItem
     {
+        public ChocolateChipCookie()
+           : base(0)
+        {
 
+        }
+        public ChocolateChipCookie(int quantity)
+            : base(quantity)
+        {
+
+        }
     }
 }

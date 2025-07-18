@@ -22,7 +22,7 @@ namespace FoodForBots.Food.Core.Recipes.Desserts
         }
     }
 
-    public class CookieDoughRecipe : Recipe, IIngredient
+    public class CookieDoughRecipe : Recipe
     {
         public CookieDoughRecipe()
         {

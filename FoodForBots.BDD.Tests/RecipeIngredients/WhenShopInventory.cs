@@ -17,7 +17,7 @@ namespace FoodForBots.BDD.Tests.RecipeIngredients
         public void GetsEquipment_ItIsAlwaysAvailable()
         {
             var shopInventory = new ShopInventory();
-            var oven = shopInventory.GetEquipment(typeof(Oven));
+            var hasEquipment = shopInventory.TryGetEquipment(typeof(Oven), out var oven);
             Assert.NotNull(oven);
 
            
@@ -27,7 +27,7 @@ namespace FoodForBots.BDD.Tests.RecipeIngredients
         public void GetsInvalidEquipment_ItReturnsNoEquipment()
         {
             var shopInventory = new ShopInventory();
-            var cookie = shopInventory.GetEquipment(typeof(Cookie));
+            var hasEquipment = shopInventory.TryGetEquipment(typeof(Cookie), out var cookie);
             Assert.NotNull(cookie);
             Assert.Equal(typeof(NoEquipment), cookie.GetType());
 

@@ -7,5 +7,15 @@ namespace FoodForBots.Food.Core.Ingredients.Grains.Processed
 {
     public class Flour : Ingredient
     {
+        public Flour()
+    : base(0)
+        {
+
+        }
+        public Flour(int quantity)
+            : base(quantity)
+        {
+
+        }
     }
 }

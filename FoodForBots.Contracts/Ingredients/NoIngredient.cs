@@ -6,5 +6,6 @@ namespace FoodForBots.Contracts.Ingredients
 {
     public class NoIngredient : IIngredient
     {
+        public int Quantity => 0;
     }
 }
