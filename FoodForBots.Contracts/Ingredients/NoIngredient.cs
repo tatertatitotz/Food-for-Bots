@@ -4,8 +4,7 @@ using System.Text;
 
 namespace FoodForBots.Contracts.Ingredients
 {
-	public interface IIngredient
-	{
-
-	}
+    public class NoIngredient : IIngredient
+    {
+    }
 }

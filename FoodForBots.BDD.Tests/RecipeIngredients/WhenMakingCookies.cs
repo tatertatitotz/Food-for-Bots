@@ -2,6 +2,7 @@
 using FoodForBots.Contracts.Recipes;
 using FoodForBots.Food.Core.Ingredients.Fruit;
 using FoodForBots.Food.Core.Ingredients.Meat;
+using FoodForBots.Food.Core.Inventories;
 using FoodForBots.Food.Core.Recipes.Desserts;
 using Moq;
 
@@ -15,9 +16,12 @@ namespace FoodForBots.BDD.Tests.RecipeIngredients
             public void ThenItBakes()
             {
                 var cookieRecipe = new CookieRecipe();
-                var maker = new RecipeMaker<CookieRecipe>(Mock.Of<IInventory>());
+                var maker = new RecipeMaker<CookieRecipe>(new ShopInventory());
 
-                maker.StartMaking(cookieRecipe);
+                var canMake = maker.StartMaking(cookieRecipe);
+                var cookies = maker.FinishMaking(cookieRecipe);
+                Assert.True(canMake);
+                Assert.Equal(12, cookies.Count());
             }
         }
 

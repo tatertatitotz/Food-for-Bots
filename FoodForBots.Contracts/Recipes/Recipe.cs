@@ -2,6 +2,7 @@
 using FoodForBots.Food.Core.Equipment;
 using System;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace FoodForBots.Contracts.Recipes
 {
@@ -49,28 +50,34 @@ namespace FoodForBots.Contracts.Recipes
             this.inventory = inventory;
         }
 
-        public void StartMaking(TRecipe recipe)
+        public bool StartMaking(TRecipe recipe)
         {
-            GetIngredients(recipe);
+            return GetIngredients(recipe) &&
             GetEquipment(recipe);
         }
 
-        private void GetEquipment(TRecipe recipe)
+        private bool GetEquipment(TRecipe recipe)
         {
             foreach (var item in recipe.Equipment)
                 if (inventory.TryGetEquipment(item.GetType(), out var equipment))
                     this.equipment.Add(equipment);
-                else
-                    throw new Exception("Inventory ain't got no Equipment >:(");
+                else return false;
+            return true;
         }
 
-        private void GetIngredients(TRecipe recipe)
+        private bool GetIngredients(TRecipe recipe)
         {
             foreach (var item in recipe.Ingredients)
-                if (inventory.TryGetIngredient(item.GetType(), out var ingredient))
+                if (inventory.TryGetIngredient(item.IngredientType, out var ingredient))
                     this.ingredients.Add(ingredient);
-                else
-                    throw new Exception("Inventory ain't got no Ingredient >:P");
+                else return false;
+            return true;
+        }
+
+        public IEnumerable<IIngredient> FinishMaking(TRecipe recipe)
+        {
+            return recipe.Output.Select(o => (IIngredient)Activator.CreateInstance(o.IngredientType, o.Quantity));
+            //Todo: ISSUE HERE FIX IT LATER ! ! ! ^^^
         }
     }
 }
