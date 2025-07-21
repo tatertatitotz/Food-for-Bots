@@ -500,3 +500,6 @@ FodyWeavers.xsd
 *.msix
 *.msm
 *.msp
+/Food For Tots and Bots/Library
+/Food For Tots and Bots/Temp
+/Food For Tots and Bots/UserSettings
