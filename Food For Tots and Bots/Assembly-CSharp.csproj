@@ -61,8 +61,8 @@
     <Analyzer Include="C:\Program Files\Unity\Hub\Editor\6000.0.51f1\Editor\Data\Tools\Unity.SourceGenerators\Unity.UIToolkit.SourceGenerator.dll" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\Scripts\PottedPlantController.cs" />
     <Compile Include="Assets\Scripts\GameMaster.cs" />
+    <Compile Include="Assets\Scripts\PottedPlantController.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">
@@ -1225,12 +1225,12 @@
       <HintPath>Library\ScriptAssemblies\Unity.VisualScripting.State.dll</HintPath>
       <Private>False</Private>
     </Reference>
-    <Reference Include="Unity.2D.Sprite.Editor">
-      <HintPath>Library\ScriptAssemblies\Unity.2D.Sprite.Editor.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
     <Reference Include="Unity.Services.Multiplayer.Editor.Shared">
       <HintPath>Library\ScriptAssemblies\Unity.Services.Multiplayer.Editor.Shared.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Unity.2D.Sprite.Editor">
+      <HintPath>Library\ScriptAssemblies\Unity.2D.Sprite.Editor.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="Unity.Services.Multiplayer.Multiplay.Authoring.Core">
@@ -1421,20 +1421,20 @@
       <HintPath>Library\ScriptAssemblies\Unity.2D.Common.Runtime.dll</HintPath>
       <Private>False</Private>
     </Reference>
-    <Reference Include="Unity.Services.Authentication">
-      <HintPath>Library\ScriptAssemblies\Unity.Services.Authentication.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
     <Reference Include="Unity.VisualScripting.State.Editor">
       <HintPath>Library\ScriptAssemblies\Unity.VisualScripting.State.Editor.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Unity.Multiplayer.Tools.Adapters">
+      <HintPath>Library\ScriptAssemblies\Unity.Multiplayer.Tools.Adapters.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="Unity.Mathematics">
       <HintPath>Library\ScriptAssemblies\Unity.Mathematics.dll</HintPath>
       <Private>False</Private>
     </Reference>
-    <Reference Include="Unity.Multiplayer.Tools.Adapters">
-      <HintPath>Library\ScriptAssemblies\Unity.Multiplayer.Tools.Adapters.dll</HintPath>
+    <Reference Include="Unity.Services.Authentication">
+      <HintPath>Library\ScriptAssemblies\Unity.Services.Authentication.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="Unity.Networking.Transport">
