@@ -34,4 +34,11 @@ namespace FoodForBots.Food.Core.Recipes.Desserts
             AddRequirement<ChocolateChip>(1);
         }
     }
+    public class ChocolateChipCakeRecipe : Recipe
+    {
+        public ChocolateChipCakeRecipe()
+        {
+            AddRequirement<ChocolateChipCakeBatter>(1);
+        }
+    }
 }

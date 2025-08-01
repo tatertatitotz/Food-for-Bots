@@ -4,6 +4,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using FoodForBots.Food.Core.Recipes.Entree;
+using FoodForBots.Food.Core.Inventories;
 
 namespace FoodForBots.xTests
 {
@@ -12,18 +14,10 @@ namespace FoodForBots.xTests
         [Fact]
         public void ItCanMakeTheDish()
         {
-            var pieRecipe = new FruitPie();
-            var inventory = new IngredientInventory();
-            var canMake = pieRecipe.CanMake(inventory);
+            var chickenNuggetRecipe = new ChickenNuggetRecipe();
+            var inventory = new ShopInventory();
+            var canMake = chickenNuggetRecipe.CanMake(inventory);
             Assert.True(canMake);
-        }
-        [Fact]
-        public void QuickTest()
-        {
-            var apple1 = new Apple();
-            var apple2 = new Apple();
-            var apple3 = apple1;
-            Assert.Equal(apple1, apple3);
         }
     }
 

@@ -15,4 +15,17 @@ namespace FoodForBots.Food.Core.Ingredients.Dessert
 
         }
     }
+    public class ChocolateChipCakeBatter : Ingredient
+    {
+        public ChocolateChipCakeBatter()
+         : base(0)
+        {
+
+        }
+        public ChocolateChipCakeBatter(int quantity)
+            : base(quantity)
+        {
+
+        }
+    }
 }

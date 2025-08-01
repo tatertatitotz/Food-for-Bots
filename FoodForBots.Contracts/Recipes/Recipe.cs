@@ -36,6 +36,18 @@ namespace FoodForBots.Contracts.Recipes
         {
             equipment.Add(new TEquipment() { Setting = setting });
         }
+        public bool CanMake(IInventory inventory)
+        {
+            foreach (var i in Ingredients)
+            {
+                if (inventory.HasEnoughIngredients(i.IngredientType, i.Quantity))
+                {
+                    return true;
+                }
+
+            }
+            return false;
+        }
     }
 
     public class RecipeMaker<TRecipe>
@@ -79,5 +91,6 @@ namespace FoodForBots.Contracts.Recipes
             return recipe.Output.Select(o => (IIngredient)Activator.CreateInstance(o.IngredientType, o.Quantity));
             //Todo: ISSUE HERE FIX IT LATER ! ! ! ^^^
         }
+
     }
 }

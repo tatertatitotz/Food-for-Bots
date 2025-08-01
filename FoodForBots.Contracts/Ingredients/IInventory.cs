@@ -13,6 +13,7 @@ namespace FoodForBots.Contracts.Ingredients
         IIngredient GetIngredient(Type type);
         bool TryGetEquipment(Type type, out IEquipment equipment);
         bool TryGetIngredient(Type type, out IIngredient ingredient);
+        bool HasEnoughIngredients(Type ingredient, int quantity);
     }
 
 }

@@ -14,5 +14,6 @@ namespace FoodForBots.Food.Core.Ingredients.Meat
         {
 
         }
+        //Add ability to cut.
     }
 }

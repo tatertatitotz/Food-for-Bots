@@ -18,6 +18,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\FoodForBots.Core\FoodForBots.Core.csproj" />
+    <ProjectReference Include="..\FoodForBots.Food.Core\FoodForBots.Food.Core.csproj" />
   </ItemGroup>
 
   <ItemGroup>

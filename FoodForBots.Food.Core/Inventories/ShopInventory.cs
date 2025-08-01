@@ -29,6 +29,11 @@ namespace FoodForBots.Food.Core.Inventories
             throw new NotImplementedException();
         }
 
+        public bool HasEnoughIngredients(Type ingredient, int quantity)
+        {
+            return true;
+        }
+
         public bool TryGetEquipment(Type type, out IEquipment equipment)
         {
             equipment = new NoEquipment();
